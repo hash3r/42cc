@@ -11,6 +11,8 @@
 		041075FB177A59810095F99F /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041075F9177A59810095F99F /* MainViewController.xib */; };
 		041075FF177A5AF90095F99F /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041075FD177A5AF90095F99F /* AboutViewController.m */; };
 		04107600177A5AF90095F99F /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041075FE177A5AF90095F99F /* AboutViewController.xib */; };
+		04107604177B82680095F99F /* MainInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04107602177B82670095F99F /* MainInfoViewController.m */; };
+		04107605177B82680095F99F /* MainInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04107603177B82680095F99F /* MainInfoViewController.xib */; };
 		04271A3C177A32B800E59C1D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04271A3B177A32B800E59C1D /* UIKit.framework */; };
 		04271A3E177A32B800E59C1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04271A3D177A32B800E59C1D /* Foundation.framework */; };
 		04271A40177A32B800E59C1D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04271A3F177A32B800E59C1D /* CoreGraphics.framework */; };
@@ -22,6 +24,8 @@
 		04271A52177A32B800E59C1D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04271A51177A32B800E59C1D /* Default-568h@2x.png */; };
 		04271A55177A32B800E59C1D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04271A54177A32B800E59C1D /* LoginViewController.m */; };
 		04271A58177A32B800E59C1D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04271A56177A32B800E59C1D /* LoginViewController.xib */; };
+		04B49AB7178237A0009EAF3C /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B49AB5178237A0009EAF3C /* ContactsViewController.m */; };
+		04B49AB8178237A0009EAF3C /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B49AB6178237A0009EAF3C /* ContactsViewController.xib */; };
 		444B3F3955334D82932D8656 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DAE562892294FBCB33E82D4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +36,9 @@
 		041075FC177A5AF90095F99F /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		041075FD177A5AF90095F99F /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		041075FE177A5AF90095F99F /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		04107601177B82670095F99F /* MainInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainInfoViewController.h; sourceTree = "<group>"; };
+		04107602177B82670095F99F /* MainInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainInfoViewController.m; sourceTree = "<group>"; };
+		04107603177B82680095F99F /* MainInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainInfoViewController.xib; sourceTree = "<group>"; };
 		04271A38177A32B800E59C1D /* 42cc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 42cc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04271A3B177A32B800E59C1D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		04271A3D177A32B800E59C1D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -48,6 +55,9 @@
 		04271A53177A32B800E59C1D /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		04271A54177A32B800E59C1D /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		04271A57177A32B800E59C1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LoginViewController.xib; sourceTree = "<group>"; };
+		04B49AB4178237A0009EAF3C /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
+		04B49AB5178237A0009EAF3C /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
+		04B49AB6178237A0009EAF3C /* ContactsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
 		5DAE562892294FBCB33E82D4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FFEEEF135774DE5858E467F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -104,6 +114,12 @@
 				041075F7177A59810095F99F /* MainViewController.h */,
 				041075F8177A59810095F99F /* MainViewController.m */,
 				041075F9177A59810095F99F /* MainViewController.xib */,
+				04107601177B82670095F99F /* MainInfoViewController.h */,
+				04107602177B82670095F99F /* MainInfoViewController.m */,
+				04107603177B82680095F99F /* MainInfoViewController.xib */,
+				04B49AB4178237A0009EAF3C /* ContactsViewController.h */,
+				04B49AB5178237A0009EAF3C /* ContactsViewController.m */,
+				04B49AB6178237A0009EAF3C /* ContactsViewController.xib */,
 				041075FC177A5AF90095F99F /* AboutViewController.h */,
 				041075FD177A5AF90095F99F /* AboutViewController.m */,
 				041075FE177A5AF90095F99F /* AboutViewController.xib */,
@@ -189,6 +205,8 @@
 				04271A58177A32B800E59C1D /* LoginViewController.xib in Resources */,
 				041075FB177A59810095F99F /* MainViewController.xib in Resources */,
 				04107600177A5AF90095F99F /* AboutViewController.xib in Resources */,
+				04107605177B82680095F99F /* MainInfoViewController.xib in Resources */,
+				04B49AB8178237A0009EAF3C /* ContactsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +253,8 @@
 				04271A55177A32B800E59C1D /* LoginViewController.m in Sources */,
 				041075FA177A59810095F99F /* MainViewController.m in Sources */,
 				041075FF177A5AF90095F99F /* AboutViewController.m in Sources */,
+				04107604177B82680095F99F /* MainInfoViewController.m in Sources */,
+				04B49AB7178237A0009EAF3C /* ContactsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,10 +11,13 @@
 #import "LoginViewController.h"
 #import "MainViewController.h"
 
+NSString *const sessionStateChangedNotification = @"sessionStateChangedNotification";
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	[FBProfilePictureView class];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 	self.mainViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
@@ -29,8 +32,12 @@
 	else {
 		[self showLoginView];
 	}
-	
     return YES;
+}
+
+- (void)logoutButtonWasPressed:(id)sender
+{
+	[FBSession.activeSession closeAndClearTokenInformation];
 }
 
 - (void)showLoginView
@@ -79,6 +86,10 @@
         default:
             break;
     }
+	
+	[[NSNotificationCenter defaultCenter]
+	 postNotificationName:sessionStateChangedNotification
+	 object:session];
 	
     if (error) {
         UIAlertView *alertView = [[UIAlertView alloc]

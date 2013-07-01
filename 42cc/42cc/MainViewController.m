@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 
+
 @interface MainViewController ()
 
 @end
@@ -18,16 +19,16 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
+    if (self)
+	{
+	}
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+	[self.view addSubview:self.tabBarController.view];
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
 											  initWithTitle:@"Logout"
 											  style:UIBarButtonItemStyleBordered

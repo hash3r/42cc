@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString *const sessionStateChangedNotification;
+
 @class MainViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
