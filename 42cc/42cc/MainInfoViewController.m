@@ -9,6 +9,7 @@
 #import "MainInfoViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "AppDelegate.h"
+#import "Person.h"
 
 @interface MainInfoViewController ()
 
@@ -64,9 +65,28 @@
          ^(FBRequestConnection *connection,
            NSDictionary<FBGraphUser> *user,
            NSError *error) {
-             if (!error) {
-                 self.userNameLabel.text = user.name;
-                 self.userProfileImage.profileID = user.id;
+             if (!error)
+			 {
+				 Person *person = [Person MR_findFirstByAttribute:@"identifier" withValue:user.id];
+
+				 if (person == nil)
+				 {
+					 //Create new entity and set properties
+					 Person *newPerson = [Person MR_createEntity];
+					 newPerson.lastName = user.last_name;
+					 newPerson.firstName = user.first_name;
+					 newPerson.identifier = user.id;
+//					 newPerson.avatar = [UIImage imageNamed:@"avatar"];
+					 
+					 //Save to persistant storage
+					 [[NSManagedObjectContext MR_defaultContext] saveToPersistentStoreAndWait];
+					 
+					 person = [Person MR_findFirstByAttribute:@"identifier" withValue:user.id];
+				 }
+				 self.userID = user.id;
+//                 self.userNameLabel.text = [NSString stringWithFormat:@"%@ %@", person.lastName, person.firstName];
+				 self.userNameTextField.text = [NSString stringWithFormat:@"%@ %@", person.lastName, person.firstName];
+                 self.userProfileImage.profileID = person.identifier;
              }
          }];
     }
@@ -77,5 +97,26 @@
     [self populateUserDetails];
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.userNameTextField  resignFirstResponder];
+    return YES;
+}
 
+- (IBAction)saveUserName:(id)sender
+{
+	Person *person = [Person MR_findFirstByAttribute:@"identifier" withValue:self.userID];
+	if (person)
+	{
+		if ([self.userNameTextField.text length] != 0)
+		{
+			person.lastName = self.userNameTextField.text;
+		}
+		else
+		{
+			self.userNameTextField.text = [NSString stringWithFormat:@"%@ %@", person.lastName, person.firstName];	
+		}
+	}
+
+}
 @end

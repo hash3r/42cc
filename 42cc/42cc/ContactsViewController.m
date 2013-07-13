@@ -9,7 +9,7 @@
 #import "ContactsViewController.h"
 #import "FBFriendPickerViewController.h"
 
-@interface ContactsViewController ()
+@interface ContactsViewController () <FBFriendPickerDelegate>
 
 @end
 
@@ -30,7 +30,7 @@
 	self.friendPickerController = [[FBFriendPickerViewController alloc]
 								   initWithNibName:nil bundle:nil];
 	self.friendPickerController.title = @"Friends";
-
+	self.friendPickerController.delegate = self;
 
 	[self.friendPickerController loadData];
 	self.friendPickerController.allowsMultipleSelection = NO;
@@ -44,6 +44,35 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)friendPickerViewControllerSelectionDidChange:(FBFriendPickerViewController *)friendPicker
+{
+	if (friendPicker.selection.count != 0)
+	{
+		NSDictionary *selectedFriend = friendPicker.selection[0];
+		if (selectedFriend)
+		{
+			NSString *urlStr = [NSString stringWithFormat:@"fb://profile/%@", selectedFriend[@"id"]];
+			NSString *escaped = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+			NSURL *url = [NSURL URLWithString:escaped];
+			if ([[UIApplication sharedApplication] canOpenURL:url])
+			{
+				[[UIApplication sharedApplication] openURL:url];
+			}
+			else
+			{
+				urlStr = [NSString stringWithFormat:@"http://www.facebook.com/%@", selectedFriend[@"id"]];
+				escaped = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+				url = [NSURL URLWithString:escaped];
+				if ([[UIApplication sharedApplication] canOpenURL:url])
+				{
+					[[UIApplication sharedApplication] openURL:url];
+				}
+			}
+			[friendPicker clearSelection];
+		}
+	}
 }
 
 @end

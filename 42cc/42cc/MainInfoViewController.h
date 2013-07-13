@@ -12,5 +12,9 @@
 @interface MainInfoViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet FBProfilePictureView *userProfileImage;
-@property (strong, nonatomic) IBOutlet UILabel *userNameLabel;
+//@property (strong, nonatomic) IBOutlet UILabel *userNameLabel;
+@property (strong, nonatomic) IBOutlet UITextField *userNameTextField;
+@property (strong, nonatomic) NSString *userID;
+
+- (IBAction)saveUserName:(id)sender;
 @end

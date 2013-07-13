@@ -12,3 +12,9 @@
 #define COCOAPODS_VERSION_MINOR_Facebook_iOS_SDK 5
 #define COCOAPODS_VERSION_PATCH_Facebook_iOS_SDK 2
 
+// MagicalRecord
+#define COCOAPODS_POD_AVAILABLE_MagicalRecord
+#define COCOAPODS_VERSION_MAJOR_MagicalRecord 2
+#define COCOAPODS_VERSION_MINOR_MagicalRecord 1
+#define COCOAPODS_VERSION_PATCH_MagicalRecord 0
+

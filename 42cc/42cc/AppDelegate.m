@@ -17,6 +17,8 @@ NSString *const sessionStateChangedNotification = @"sessionStateChangedNotificat
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	[MagicalRecord setupAutoMigratingCoreDataStack];
+
 	[FBProfilePictureView class];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
@@ -32,6 +34,8 @@ NSString *const sessionStateChangedNotification = @"sessionStateChangedNotificat
 	else {
 		[self showLoginView];
 	}
+	
+	
     return YES;
 }
 
@@ -120,6 +124,7 @@ NSString *const sessionStateChangedNotification = @"sessionStateChangedNotificat
 {
     return [FBSession.activeSession handleOpenURL:url];
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

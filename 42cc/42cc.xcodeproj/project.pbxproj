@@ -24,6 +24,9 @@
 		04271A52177A32B800E59C1D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04271A51177A32B800E59C1D /* Default-568h@2x.png */; };
 		04271A55177A32B800E59C1D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04271A54177A32B800E59C1D /* LoginViewController.m */; };
 		04271A58177A32B800E59C1D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04271A56177A32B800E59C1D /* LoginViewController.xib */; };
+		04B0B89A178F1ED70008756A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04B0B898178F1ED70008756A /* Model.xcdatamodeld */; };
+		04B0B8A0178F62270008756A /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04B0B89F178F62270008756A /* avatar.jpg */; };
+		04B0B8A31790D94B0008756A /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0B8A21790D94B0008756A /* Person.m */; };
 		04B49AB7178237A0009EAF3C /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B49AB5178237A0009EAF3C /* ContactsViewController.m */; };
 		04B49AB8178237A0009EAF3C /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B49AB6178237A0009EAF3C /* ContactsViewController.xib */; };
 		444B3F3955334D82932D8656 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DAE562892294FBCB33E82D4 /* libPods.a */; };
@@ -55,6 +58,10 @@
 		04271A53177A32B800E59C1D /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		04271A54177A32B800E59C1D /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		04271A57177A32B800E59C1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LoginViewController.xib; sourceTree = "<group>"; };
+		04B0B899178F1ED70008756A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		04B0B89F178F62270008756A /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
+		04B0B8A11790D94B0008756A /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		04B0B8A21790D94B0008756A /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		04B49AB4178237A0009EAF3C /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
 		04B49AB5178237A0009EAF3C /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
 		04B49AB6178237A0009EAF3C /* ContactsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
@@ -109,6 +116,7 @@
 		04271A41177A32B800E59C1D /* 42cc */ = {
 			isa = PBXGroup;
 			children = (
+				04B0B89B178F1EE30008756A /* Model */,
 				04271A4A177A32B800E59C1D /* AppDelegate.h */,
 				04271A4B177A32B800E59C1D /* AppDelegate.m */,
 				041075F7177A59810095F99F /* MainViewController.h */,
@@ -134,6 +142,7 @@
 		04271A42177A32B800E59C1D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				04B0B89F178F62270008756A /* avatar.jpg */,
 				04271A43177A32B800E59C1D /* 42cc-Info.plist */,
 				04271A44177A32B800E59C1D /* InfoPlist.strings */,
 				04271A47177A32B800E59C1D /* main.m */,
@@ -143,6 +152,16 @@
 				04271A51177A32B800E59C1D /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04B0B89B178F1EE30008756A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04B0B8A11790D94B0008756A /* Person.h */,
+				04B0B8A21790D94B0008756A /* Person.m */,
+				04B0B898178F1ED70008756A /* Model.xcdatamodeld */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +226,7 @@
 				04107600177A5AF90095F99F /* AboutViewController.xib in Resources */,
 				04107605177B82680095F99F /* MainInfoViewController.xib in Resources */,
 				04B49AB8178237A0009EAF3C /* ContactsViewController.xib in Resources */,
+				04B0B8A0178F62270008756A /* avatar.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +275,8 @@
 				041075FF177A5AF90095F99F /* AboutViewController.m in Sources */,
 				04107604177B82680095F99F /* MainInfoViewController.m in Sources */,
 				04B49AB7178237A0009EAF3C /* ContactsViewController.m in Sources */,
+				04B0B89A178F1ED70008756A /* Model.xcdatamodeld in Sources */,
+				04B0B8A31790D94B0008756A /* Person.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +404,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		04B0B898178F1ED70008756A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				04B0B899178F1ED70008756A /* Model.xcdatamodel */,
+			);
+			currentVersion = 04B0B899178F1ED70008756A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 04271A30177A32B800E59C1D /* Project object */;
 }
